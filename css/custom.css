@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+:root{
+    --orange-color: #f89950; 
+    --black-color: #050a0e;
+    --blue-color: #b4c4de;
+    --white-color: #e7e7e9;
+}
+
+.bodycss {
+    background-color: var(--orange-color); 
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+#update{
+    display: none;
+}

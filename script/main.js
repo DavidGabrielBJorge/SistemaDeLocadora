@@ -23,6 +23,11 @@ function validar(){
         //alert("Deve preencher o ano do filme")
         return false;
     }
+    else if(anoFilme < 1888){
+        document.getElementById('warning').innerHTML = 'Deve preencher um ano válido';
+        //alert("Deve preencher o ano do filme")
+        return false;
+    }
     else{
         document.getElementById('warning').setAttribute("class", "hidden");
     }
@@ -42,13 +47,13 @@ function mostrarInformacoes(){
     var elementoHTML = "";
 
     filmesLista.forEach(function(element, index){
-        elementoHTML += "<tr>";
-        elementoHTML += "<td>" + element.tituloFilme + "</td>";
-        elementoHTML += "<td>" + element.diretorFilme + "</td>";
-        elementoHTML += "<td>" + element.produtoraFilme + "</td>";
-        elementoHTML += "<td>" + element.anoFilme + "</td>";
-        elementoHTML += '<td><button onclick="deletar('+index+')" class="btn btn-danger">Deletar</button> <button onclick="atualizar('+index+')" class="btn btn-warning m-2">Atualizar</button></td>'
-        elementoHTML += "</tr>";
+        elementoHTML += '<tr>';
+        elementoHTML += '<td class="corpoTabela">' + element.tituloFilme + '</td>';
+        elementoHTML += '<td class="corpoTabela">' + element.diretorFilme + '</td>';
+        elementoHTML += '<td class="corpoTabela">' + element.produtoraFilme + '</td>';
+        elementoHTML += '<td class="corpoTabela">' + element.anoFilme + '</td>';
+        elementoHTML += '<td class="corpoTabela"><button onclick="deletar('+index+')" class="btn btn-danger"><i class="bi bi-trash3"></i> Deletar</button> <button onclick="atualizar('+index+')" class="btn btn-warning m-2"><i class="bi bi-pencil"></i> Atualizar</button></td>'
+        elementoHTML += '</tr>';
     });
     document.querySelector("#crud tbody").innerHTML=elementoHTML;
 }

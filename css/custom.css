@@ -19,3 +19,15 @@
 .hidden{
     display: none;
 }
+
+.tituloTabela{
+    background-color: var(--blue-color);
+    color: var(--black-color);
+    width: 300px;
+    text-align: center;
+}
+
+.corpoTabela{
+    background-color: var(--white-color);
+    text-align: center;
+}

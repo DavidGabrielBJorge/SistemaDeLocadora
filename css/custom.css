@@ -31,3 +31,9 @@
     background-color: var(--white-color);
     text-align: center;
 }
+
+#aviso{
+    background-color: var(--blue-color);
+    border: solid 1px;
+    text-align: center;
+}

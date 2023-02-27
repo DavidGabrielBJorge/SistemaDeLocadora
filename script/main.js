@@ -4,32 +4,36 @@ function validar(){
     var produtoraFilme = document.getElementById("produtoraFilme").value;
     var anoFilme = document.getElementById("anoFilme").value;
 
+    let data = new Date();
+    let anoAtual = parseInt(data.getFullYear());
+
     if(tituloFilme == ""){
-        document.getElementById('warning').innerHTML = 'Deve preencher o titulo do filme';
+        document.getElementById('aviso').innerHTML = 'Deve preencher o titulo do filme';
         return false;
     }
     else if(diretorFilme == ""){
-        document.getElementById('warning').innerHTML = 'Deve preencher o diretor do filme';
+        document.getElementById('aviso').innerHTML = 'Deve preencher o diretor do filme';
         //alert("Deve preencher o diretor do filme")
         return false;
     }
     else if(produtoraFilme == ""){
-        document.getElementById('warning').innerHTML = 'Deve preencher o produtor do filme';
+        document.getElementById('aviso').innerHTML = 'Deve preencher o produtor do filme';
         //alert("Deve preencher o produtor do filme")
         return false;
     }
     else if(anoFilme == ""){
-        document.getElementById('warning').innerHTML = 'Deve preencher o ano do filme';
+        document.getElementById('aviso').innerHTML = 'Deve preencher o ano do filme';
         //alert("Deve preencher o ano do filme")
         return false;
     }
-    else if(anoFilme < 1888){
-        document.getElementById('warning').innerHTML = 'Deve preencher um ano válido';
+    //O primeiro filme lançado foi em 1888 e não deve colocar filmes que são depois do ano atual
+    else if(anoFilme < 1888 || anoFilme > anoAtual){
+        document.getElementById('aviso').innerHTML = 'Deve preencher um ano válido';
         //alert("Deve preencher o ano do filme")
         return false;
     }
     else{
-        document.getElementById('warning').setAttribute("class", "hidden");
+        document.getElementById('aviso').setAttribute("class", "hidden");
     }
 
     return true;

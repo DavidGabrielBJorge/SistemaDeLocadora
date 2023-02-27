@@ -50,7 +50,7 @@ function mostrarInformacoes(){
         espacamento += 
         '<td><button onclick="deletar('
         +index+
-        ')" class="btn btn-danger">Delete</button><button onclick="atualizar('
+        ')" class="btn btn-danger">Deletar</button><button onclick="atualizar('
         +index+
         ')" class="btn btn-warning m-2">Atualizar</button></td>'
         espacamento += "</tr>";
@@ -69,10 +69,10 @@ function adicionar(){
 
         var filmesLista;
         if(localStorage.getItem("filmesLista")==null){
-            filmesLista = []
+            filmesLista = [];
         }
         else{
-            filmesLista = JSON.parse(localStorage.getItem("filmesLista"))
+            filmesLista = JSON.parse(localStorage.getItem("filmesLista"));
         }     
         filmesLista.push({
             tituloFilme : tituloFilme,
@@ -90,4 +90,17 @@ function adicionar(){
         document.getElementById("produtoraFilme").value = "";
         document.getElementById("anoFilme").value = "";
     }
+}
+
+function deletar(index){
+    var filmesLista;
+    if(localStorage.getItem("filmesLista")==null){
+        filmesLista = []
+    }
+    else{
+        filmesLista = JSON.parse(localStorage.getItem("filmesLista"))
+    }    
+    filmesLista.splice(index,1);
+    localStorage.setItem("filmesLista",JSON.stringify(filmesLista));
+    mostrarInformacoes();
 }

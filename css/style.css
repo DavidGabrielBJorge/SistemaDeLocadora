@@ -1,0 +1,345 @@
+:root{
+    --orange-color: #f89950; 
+    --black-color: #050a0e;
+    --blue-color: #b4c4de;
+    --white-color: #e7e7e9;
+    --red-color: #ba4331;
+}
+
+body, textarea {
+	margin: 0;
+	padding: 0;
+    background-color: var(--orange-color); 
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+h1, h2, h3 {
+	color: #333;
+}
+
+p {
+	color: var(--white-color);
+}
+
+/*==============================NAVBAR==============================*/
+.navbar-container {
+	width: 100%;
+	height: 80px;
+	background-color: var(--black-color);
+	padding: 0 2em; /*Para os elemmentos não ficarem próximos a extremidade, 0 cima e baixo e 2em na esquerda e direita*/
+	position: relative;
+	box-sizing: border-box;/*Não passar dos limites das bordas*/
+}
+
+/*logo do site*/
+.logo {
+	width: 50px;
+	margin-top: 15px;
+}
+
+nav {
+	position: relative;
+}
+
+.navbar-items {
+	list-style: none;/*Tira a bolinha que fica na esquerda*/
+	position: absolute;
+	display: inline-block;
+	height: 80px;
+	line-height: 80px;
+	margin: 0;
+	right: 0;
+}
+
+.navbar-items li {
+	display: inline-block;
+	text-transform: uppercase;
+	margin-left: 25px;/*Cada item vai ter 25px de expaço pra esquerda*/
+}
+
+.navbar-items li a {
+	color: var(--black-color);
+	text-decoration: none;
+	transition: .5s;/*5s de transição de animação*/
+}
+
+.navbar-items li a:hover {
+	color: var(--white-color);
+}
+
+.default-btn {
+	padding: 15px 20px;/*15px nas laterias e 20px em cima*/
+	background-color: var(--blue-color);
+	border-radius: 5px;
+    font-weight: bold;
+	color: var(--black-color);
+}
+
+.default-btn:hover {/*Ao clicar no botão a cor do background mudará*/
+	background-color: var(--orange-color);
+	color: var(--white-color);
+}
+
+
+/*==============================MAIN BANNER==============================*/
+.main-banner {
+	background-image: url('../img/imagem_de_fundo.jpg');
+	background-size: cover;/*Vai cobrir toda a área*/
+	background-position: center;
+	padding: 10em 0;
+	position: relative;
+}
+
+.main-banner h1, .main-banner p {
+	color: var(--orange-color);
+	text-align: center;
+	font-weight: bold;
+}
+
+.main-banner h1 {
+	font-size: 54px;
+}
+
+.main-banner p {
+	font-size: 32px;
+}
+
+/*==============================ESPECIALIDADES==============================*/
+
+.specialties-container {
+	padding: 5em 0;/*Espaçamento em baixo e em cima*/
+}
+
+.specialties-container ul {
+	display: flex;
+	width: 90%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0;
+}
+
+.specialties-container ul li {/*conteudo das especialidades*/
+	flex: 1 1 200px;
+	list-style: none;
+	text-align: center;
+	padding: 20px;
+}
+
+.fas {/*caracteristicas dos icones*/
+	font-size: 60px;
+	margin-bottom: 15px;
+}
+
+.fa-solid {/*caracteristicas dos icones*/
+	font-size: 60px;
+	margin-bottom: 15px;
+}
+
+.specialties-container ul li h3 {/*cor do titulo */
+	margin-bottom: 25px;
+	color: #333;
+}
+
+.specialties-container ul li p {/*cor do texto*/
+	line-height: 24px;
+	color: var(--white-color);
+}
+
+/*==============================PRECOS==============================*/
+
+.pricing-container {
+	padding-bottom: 5em;
+	text-align: center;
+}
+
+.pricing-container h1 {
+	font-size: 36px;
+	margin-top: 0;
+}
+
+.pricing-container p {
+	font-size: 20px;
+}
+
+.plans-container {
+	display: flex;
+	justify-content: space-between;/*Os elementos estarão comm espaço entre sí dentro da div*/
+	margin-top: 50px;
+	width: 90%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.plan {
+	flex: 1 1 200px;
+	max-width: 275px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.plan ul {
+	padding: 0;/*Retira o padding*/
+}
+
+.plan li {/*Retanngulo cinza*/
+	list-style: none;
+	height: 50px;
+	line-height: 50px;
+	background-color: var(--white-color);
+	color: #333;
+}
+
+.plan .price {/*Estilizando o circulo*/
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;/*transforma o quandrado em circulo*/
+	background-color: var(--blue-color);
+	color: var(--black-color);
+	text-align: center;
+	line-height: 120px;/*Alinhar o texto com a altura*/
+	font-size: 18px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: -50px;/*Faz com que a bola ocupe um pouco de espaço do elemento abaixo*/
+}
+
+.plan .plan-name {/*estilizando os nomes dos tipos de preço*/
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: var(--black-color);
+	padding-top: 50px;
+	padding-bottom: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.plan .plan-btn {/*estilizando o botão*/
+	background-color: var(--blue-color);
+	color: var(--black-color);
+	font-size: 24px;
+	height: 75px;
+	line-height: 75px;
+	cursor: pointer;
+    border-radius: 0 0 10px 10px;
+}
+
+.plan .recommended {
+	background-color: var(--red-color);
+}
+
+/*==============================Repositorio==============================*/
+
+.repository-container {
+	background-color: var(--black-color);
+	text-align: center;
+	padding: 5em 0;/*cetraliza o conteudo*/ 
+    margin-bottom: 100px;
+}
+
+.repository-container h2 {
+	color: var(--white-color);
+	font-size: 42px;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.repository-container p {
+	color: var(--white-color);
+	font-size: 24px;
+	margin-bottom: 25px;
+}
+
+.repository-container input {
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;/*não precisa de borda, pois vai usar a cor de fundo*/
+	border-radius: 5px;
+}
+
+.repository-container .default-btn {
+	font-size: 24px;
+}
+
+/*==============================CONTATO==============================*/
+
+.contact-container {
+    background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url("../img/telefone.jpg");/*Deixa a imagem mais escura*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+	padding-top: 5em;
+	padding-bottom: 2em;
+}
+
+.contact-container h2 {
+    color: var(--white-color);
+	font-size: 36px;
+}
+
+.contact-container p {
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+.contact-container input, .contact-container textarea {
+	width: 470px;
+	padding: 10px 20px;/*padding em cima e embaixo*/
+	font-size: 16px;
+	border-radius: 5px;
+	border: 0.8px solid var(--white-color);
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+    background-color: var(--white-color);
+}
+
+.contact-container textarea {
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 470px;
+	height: 150px;
+    background-color: var(--white-color);
+}
+
+.contact-container input[type=submit] {
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: var(--blue-color);
+	color: var(--black-color);
+    font-weight: bold;
+    transition: .5s;
+}
+
+.contact-container input[type=submit]:hover {
+	background-color: var(--orange-color);
+	color: var(--white-color);
+}
+
+
+
+/*==============================FOOTER==============================*/
+
+footer {
+    background-color: var(--black-color);
+	text-align: center;
+	font-weight: bold;
+    height: 100px;
+    margin-top: 100px;
+}
+
+footer .text-footer{
+    color: var(--white-color);
+   
+}

@@ -52,7 +52,7 @@ function mostrarInformacoes(){
         elementoHTML += '<td class="corpoTabela">' + element.diretorFilme + '</td>';
         elementoHTML += '<td class="corpoTabela">' + element.produtoraFilme + '</td>';
         elementoHTML += '<td class="corpoTabela">' + element.anoFilme + '</td>';
-        elementoHTML += '<td class="corpoTabela"><button onclick="deletar('+index+')" class="btn btn-danger"><i class="bi bi-trash3"></i> Deletar</button> <button onclick="atualizar('+index+')" class="btn btn-warning m-2"><i class="bi bi-pencil"></i> Atualizar</button></td>'
+        elementoHTML += '<td class="corpoTabela"><button onclick="deletar('+index+')" class="btn btn-danger btn-tabela"><i class="bi bi-trash3"></i> Deletar</button> <button onclick="atualizar('+index+')" class="btn btn-warning m-2 btn-tabela"><i class="bi bi-pencil"></i> Atualizar</button></td>'
         elementoHTML += '</tr>';
     });
     document.querySelector("#crud tbody").innerHTML=elementoHTML;

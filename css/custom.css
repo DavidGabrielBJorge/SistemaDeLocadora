@@ -95,3 +95,21 @@ nav {
 	background-color: var(--orange-color);
 	color: var(--white-color);
 }
+
+/*==============================ESTLIZACAO PARA MOBILE==============================*/
+
+/*A partir de 1300px as regras do css dentro dessa funcao serão aplicadas*/
+@media screen and (max-width: 1300px) {
+
+	.tituloTabela{
+        font-size: 12px;
+    }
+    .corpoTabela{
+        font-size: 12px;
+    }
+
+    .btn-tabela{
+        font-size: 12px !important;
+    }
+	
+} 

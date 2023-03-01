@@ -37,3 +37,61 @@
     border: solid 1px;
     text-align: center;
 }
+
+.navbar-container {
+	width: 100%;
+	height: 80px;
+	background-color: var(--black-color);
+	padding: 0 2em; /*Para os elemmentos não ficarem próximos a extremidade, 0 cima e baixo e 2em na esquerda e direita*/
+	position: relative;
+	box-sizing: border-box;/*Não passar dos limites das bordas*/
+}
+
+/*logo do site*/
+.logo {
+	width: 50px;
+	margin-top: 15px;
+}
+
+nav {
+	position: relative;
+}
+
+.navbar-items {
+	list-style: none;/*Tira a bolinha que fica na esquerda*/
+	position: absolute;
+	display: inline-block;
+	height: 80px;
+	line-height: 80px;
+	margin: 0;
+	right: 0;
+}
+
+.navbar-items li {
+	display: inline-block;
+	text-transform: uppercase;
+	margin-left: 25px;/*Cada item vai ter 25px de expaço pra esquerda*/
+}
+
+.navbar-items li a {
+	color: var(--black-color);
+	text-decoration: none;
+	transition: .5s;/*5s de transição de animação*/
+}
+
+.navbar-items li a:hover {
+	color: var(--white-color);
+}
+
+.default-btn {
+	padding: 15px 20px;/*15px nas laterias e 20px em cima*/
+	background-color: var(--blue-color);
+	border-radius: 5px;
+    font-weight: bold;
+	color: var(--black-color);
+}
+
+.default-btn:hover {/*Ao clicar no botão a cor do background mudará*/
+	background-color: var(--orange-color);
+	color: var(--white-color);
+}

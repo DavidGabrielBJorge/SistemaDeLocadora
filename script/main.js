@@ -13,23 +13,19 @@ function validar(){
     }
     else if(diretorFilme == ""){
         document.getElementById('aviso').innerHTML = 'Deve preencher o diretor do filme';
-        //alert("Deve preencher o diretor do filme")
         return false;
     }
     else if(produtoraFilme == ""){
         document.getElementById('aviso').innerHTML = 'Deve preencher o produtor do filme';
-        //alert("Deve preencher o produtor do filme")
         return false;
     }
     else if(anoFilme == ""){
         document.getElementById('aviso').innerHTML = 'Deve preencher o ano do filme';
-        //alert("Deve preencher o ano do filme")
         return false;
     }
     //O primeiro filme lançado foi em 1888 e não deve colocar filmes que são depois do ano atual
     else if(anoFilme < 1888 || anoFilme > anoAtual){
         document.getElementById('aviso').innerHTML = 'Deve preencher um ano válido';
-        //alert("Deve preencher o ano do filme")
         return false;
     }
     else{

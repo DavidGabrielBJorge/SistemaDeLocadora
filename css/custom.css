@@ -5,6 +5,7 @@
     --black-color: #050a0e;
     --blue-color: #b4c4de;
     --white-color: #e7e7e9;
+	--red-color: #ba4331;
 }
 
 .bodycss {
@@ -35,6 +36,15 @@
 #aviso{
     background-color: var(--blue-color);
     text-align: center;
+
+}
+
+#AvisoEspacoBranco{
+	background-color: var(--red-color);
+    text-align: center;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
 }
 
 .navbar-container {

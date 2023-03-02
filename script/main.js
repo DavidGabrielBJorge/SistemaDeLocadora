@@ -114,6 +114,7 @@ function deletar(index){
     const diretorFilmeInput = document.getElementById("diretorFilme");
     const produtoraFilmeInput = document.getElementById("produtoraFilme");
     const anoFilmeInput = document.getElementById("anoFilme");
+    let AvisoEspacoBranco = document.querySelector("#AvisoEspacoBranco");
 
     tituloFilmeInput.addEventListener("input", () => {
         validarCampoVazio(tituloFilmeInput, "O título não pode ser vazio!");
@@ -134,8 +135,10 @@ function deletar(index){
     function validarCampoVazio(input, mensagem) {
     if (input.value.trim() === "") {
         input.setCustomValidity(mensagem);
+        AvisoEspacoBranco.innerHTML = "Esse campo não pode ser deixado em branco.";
         console.log("Um dos campos se encontra vazio")
     } else {
+        AvisoEspacoBranco.innerHTML = "";
         input.setCustomValidity("");
     }
     }
